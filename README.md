@@ -1,3 +1,5 @@
+## Sumário
+
 Os requisitos para cumprir este desafio são:
  
 O client.go deverá realizar uma requisição HTTP no server.go solicitando a cotação do dólar.
@@ -13,3 +15,20 @@ Os 3 contextos deverão retornar erro nos logs caso o tempo de execução seja i
 O client.go terá que salvar a cotação atual em um arquivo "cotacao.txt" no formato: Dólar: {valor}
  
 O endpoint necessário gerado pelo server.go para este desafio será: /cotacao e a porta a ser utilizada pelo servidor HTTP será a 8080.
+
+## Como testar o projeto
+
+### Crie o container para o DB
+```
+docker compose -d up
+```
+
+### Inicie o server e o mantenha rodando
+```
+go run server/main.go
+```
+
+### Rode o client
+```
+go run client/main.go
+```
